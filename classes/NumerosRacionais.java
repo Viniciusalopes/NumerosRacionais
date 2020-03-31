@@ -13,8 +13,10 @@ public class NumerosRacionais {
         denominador = 0;
     }
     
-    public NumerosRacionais(int numerador, int denominador){
-        
+    public NumerosRacionais(int numerador, int denominador) {
+        if (denominador == 0) {
+            throw new Exception("Denominador não pode ser 0");
+        }
         this.numerador = numerador;
         this.denominador = denominador;
     }
